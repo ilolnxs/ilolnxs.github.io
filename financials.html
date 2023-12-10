@@ -35,11 +35,6 @@
     // Get the canvas element
     var ctx = document.getElementById('financialsChart').getContext('2d');
 
-    // Generate random fluctuating data for the line chart
-    var getRandomData = () => {
-        return Array.from({ length: 12 }, () => Math.random() * 2); // Generates random values between 0 and 2 for each month
-    };
-
     // Define data for the line chart
     var data = {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -59,13 +54,19 @@
         ],
     };
 
-    // Create the line chart
+    // Create the line chart with fixed y-axis scale
     var myLineChart = new Chart(ctx, {
         type: 'line',
         data: data,
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            scales: {
+                y: {
+                    suggestedMin: 0, // Minimum value for the y-axis
+                    suggestedMax: 2, // Maximum value for the y-axis
+                },
+            },
         },
     });
 </script>
