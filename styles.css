@@ -58,10 +58,17 @@ footer {
     text-align: center;
     margin-top: 30px;
     padding: 10px;
-    background-color: #0d0d2f; /* Darker blue for the footer background */
+    background-color: #2f0d0d; /* Darker blue for the footer background */
 }
 
 canvas#securityChart {
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+}
+
+canvas#financialsChart {
     max-width: 100%;
     height: auto;
     margin: 20px auto;

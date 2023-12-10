@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Financial Cockpit - Cloud Services Portal</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -19,14 +20,53 @@
         </ul>
     </nav>
 
-    <section id="cockpit">
-        <h2>Financial Cockpit</h2>
-        <!-- Add specific content for the Financial Cockpit -->
-    </section>
+    <section id="financials">
+        <h2>Financials Cockpit</h2>
+        <canvas id="financialsChart" width="800" height="400"></canvas>
+        <!-- Add other financials-related content here -->
+    </section>    
 
     <footer>
         <p>&copy; 2023 Cloud Services Portal</p>
     </footer>
 
 </body>
+<script>
+    // Get the canvas element
+    var ctx = document.getElementById('financialsChart').getContext('2d');
+
+    // Generate random fluctuating data for the line chart
+    var getRandomData = () => {
+        return Array.from({ length: 12 }, () => Math.random() * 2); // Generates random values between 0 and 2 for each month
+    };
+
+    // Define data for the line chart
+    var data = {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [
+            {
+                label: 'Planned Costs (in millions)',
+                data: getRandomData(),
+                borderColor: '#36a2eb', // Color for the planned costs line
+                fill: false,
+            },
+            {
+                label: 'Actual Costs (in millions)',
+                data: getRandomData(),
+                borderColor: '#ff6384', // Color for the actual costs line
+                fill: false,
+            },
+        ],
+    };
+
+    // Create the line chart
+    var myLineChart = new Chart(ctx, {
+        type: 'line',
+        data: data,
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+        },
+    });
+</script>
 </html>
