@@ -63,8 +63,11 @@
             maintainAspectRatio: false,
             scales: {
                 y: {
-                    suggestedMin: 0, // Minimum value for the y-axis
-                    suggestedMax: 2, // Maximum value for the y-axis
+                    beginAtZero: true, // Start the y-axis at zero
+                    ticks: {
+                        stepSize: 0.5, // Adjust the step size as needed
+                        max: 2, // Maximum value for the y-axis
+                    },
                 },
             },
         },
