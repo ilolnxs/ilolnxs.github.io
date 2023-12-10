@@ -12,7 +12,7 @@ header {
 }
 
 nav {
-    background-color: #2a2a44; /* Darker blue for the navigation bar */
+    background-color: #0d0d2f; /* Darker blue for the navigation bar */
     padding: 10px;
 }
 
@@ -58,5 +58,5 @@ footer {
     text-align: center;
     margin-top: 30px;
     padding: 10px;
-    background-color: #2a2a44; /* Darker blue for the footer background */
+    background-color: #0d0d2f; /* Darker blue for the footer background */
 }
