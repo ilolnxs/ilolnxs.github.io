@@ -23,6 +23,19 @@
     <section id="security">
         <h2>Security Cockpit</h2>
         <canvas id="securityChart" width="400" height="400"></canvas>
+        
+        <!-- Boxes for additional security questions -->
+        <div class="security-box scale-green">
+            <h3>How safe is the Cloud?</h3>
+            <p>Yes</p>
+        </div>
+
+        <div class="security-box scale-green">
+            <h3>Is my data still safe?</h3>
+            <p>Yes</p>
+        </div>
+        <!-- End of security boxes -->
+
         <!-- Add other security-related content here -->
     </section>    
 
@@ -30,24 +43,30 @@
         <p>&copy; 2023 Cloud Services Portal</p>
     </footer>
 
+    <script>
+        // Get the canvas element
+        var ctx = document.getElementById('securityChart').getContext('2d');
+
+        // Define data for the pie chart
+        var data = {
+            labels: ['Secure', 'Mildly Secure', 'Not really Secure'],
+            datasets: [{
+                data: [40, 40, 20], // Example data, you can adjust these percentages
+                backgroundColor: ['#36a2eb', '#de8004', '#960000'], // Colors for each segment
+            }],
+        };
+
+        // Create the pie chart
+        var myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: data,
+            options: {
+                legend: {
+                    display: true,
+                    position: 'bottom', // You can adjust the legend position
+                },
+            },
+        });
+    </script>
 </body>
-<script>
-    // Get the canvas element
-    var ctx = document.getElementById('securityChart').getContext('2d');
-
-    // Define data for the pie chart
-    var data = {
-        labels: ['Secure','Mildly Secure', 'Not really Secure'],
-        datasets: [{
-            data: [40, 40, 20], // Example data, you can adjust these percentages
-            backgroundColor: ['#36a2eb', '#de8004', '#960000'], // Colors for each segment
-        }],
-    };
-
-    // Create the pie chart
-    var myPieChart = new Chart(ctx, {
-        type: 'pie',
-        data: data,
-    });
-</script>
 </html>
