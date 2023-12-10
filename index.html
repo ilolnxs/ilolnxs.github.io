@@ -9,12 +9,12 @@
 <body>
 
     <header>
-        <h1>Cloud Services Portal</h1>
+        <h1>Cloud Platform</h1>
     </header>
 
     <nav>
         <ul>
-            <li><a href="#order">Order Services</a></li>
+            <li><a href="#order">Order Cloud Product</a></li>
             <li><a href="#cockpit">Cockpit</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -25,18 +25,14 @@
         <h2>Order Cloud Services</h2>
         <form action="order.php" method="post">
             <!-- Your order form fields go here -->
-            <label for="serviceName">Service Name:</label>
-            <input type="text" id="serviceName" name="serviceName" required>
-
-            <label for="servicePlan">Service Plan:</label>
+ <label for="servicePlan">Cloud Product:</label>
             <select id="servicePlan" name="servicePlan" required>
-                <option value="basic">Basic Plan</option>
-                <option value="premium">Premium Plan</option>
+                <option value="k8s">k8s Platform</option>
+                <option value="serverless">Serverless</option>
+                <option value="webApp">Web Application</option>
+                <option value="server">Server</option>
                 <!-- Add more options as needed -->
             </select>
-
-            <label for="userDetails">Your Details:</label>
-            <textarea id="userDetails" name="userDetails" required></textarea>
 
             <button type="submit">Submit Order</button>
         </form>
