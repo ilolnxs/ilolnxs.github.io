@@ -1,1 +1,56 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cloud Services Portal</title>
+</head>
+<body>
+
+    <header>
+        <h1>Cloud Services Portal</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#order">Order Services</a></li>
+            <li><a href="#cockpit">Cockpit</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="order">
+        <h2>Order Cloud Services</h2>
+        <form action="order.php" method="post">
+            <!-- Your order form fields go here -->
+            <label for="serviceName">Service Name:</label>
+            <input type="text" id="serviceName" name="serviceName" required>
+
+            <label for="servicePlan">Service Plan:</label>
+            <select id="servicePlan" name="servicePlan" required>
+                <option value="basic">Basic Plan</option>
+                <option value="premium">Premium Plan</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <label for="userDetails">Your Details:</label>
+            <textarea id="userDetails" name="userDetails" required></textarea>
+
+            <button type="submit">Submit Order</button>
+        </form>
+    </section>
+
+    <section id="cockpit">
+        <h2>Cockpit</h2>
+        <p>Welcome to the Cockpit section. Here, you can find basic instructions and information about your cloud services.</p>
+        <!-- Add more content as needed -->
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Cloud Services Portal</p>
+    </footer>
+
+</body>
+</html>
