@@ -4,7 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Governance Cockpit - Cloud Services Portal</title>
+    <title>Governance - Cloud Services Portal</title>
+    <style>
+        /* Add custom styles for the statistics boxes */
+        .statistics-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .statistic-box {
+            width: 45%; /* Adjust the width as needed */
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        /* Define color scales */
+        .scale-green {
+            color: #00cc00; /* Green color for 100% */
+        }
+
+        .scale-yellow {
+            color: #ffcc00; /* Yellow color for values between 50% and 99% */
+        }
+
+        .scale-red {
+            color: #ff3300; /* Red color for 0% */
+        }
+    </style>
 </head>
 <body>
 
@@ -19,9 +49,29 @@
         </ul>
     </nav>
 
-    <section id="cockpit">
-        <h2>Governance Cockpit</h2>
-        <!-- Add specific content for the Governance Cockpit -->
+    <section id="governance">
+        <h2>Governance Overview</h2>
+
+        <div class="statistics-container">
+            <!-- Cloud Service Health -->
+            <div class="statistic-box scale-green">
+                <h3>Cloud Service Health</h3>
+                <p>100%</p>
+            </div>
+
+            <!-- User Recertification -->
+            <div class="statistic-box scale-yellow">
+                <h3>User Recertification</h3>
+                <p>95%</p>
+            </div>
+
+            <!-- Managed Service Provider Quality -->
+            <div class="statistic-box scale-red">
+                <h3>Managed Service Provider Quality</h3>
+                <p>5%</p>
+            </div>
+        </div>
+
     </section>
 
     <footer>
