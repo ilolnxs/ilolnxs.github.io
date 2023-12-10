@@ -22,25 +22,31 @@
         </ul>
     </nav>
 
-    <section id="order">
-        <h2>Order Cloud Services</h2>
-        <form action="order.php" method="post">
+<section id="order">
+    <h2>Order Cloud Services</h2>
+    <form action="order.php" method="post">
 
-            <label for="servicePlan">Cloud Product:</label>
-            <select id="servicePlan" name="servicePlan" required>
-                <option value="k8s">k8s Platform</option>
-                <option value="serverless">Serverless</option>
-                <option value="webApp">Web Application</option>
-                <option value="server">Server</option>
-                <!-- Add more options as needed -->
-            </select>
+        <label for="servicePlan">Cloud Product:</label>
+        <select id="servicePlan" name="servicePlan" required>
+            <option value="k8s">Kubernetes Platform</option>
+            <option value="serverless">Serverless Computing</option>
+            <option value="webApp">Web Application Hosting</option>
+            <option value="server">Virtual Private Server (VPS)</option>
+            <!-- Add more options as needed -->
+        </select>
 
-            <label for="userDetails">Your Details:</label>
-            <textarea id="userDetails" name="userDetails" required></textarea>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1" required>
 
-            <button type="submit">Submit Order</button>
-        </form>
-    </section>
+        <label for="customization">Customization:</label>
+        <input type="text" id="customization" name="customization">
+
+        <label for="userDetails">Your Details:</label>
+        <textarea id="userDetails" name="userDetails" required></textarea>
+
+        <button type="submit">Submit Order</button>
+    </form>
+</section>
 
     <footer>
         <p>&copy; 2023 Cloud Services Portal</p>
