@@ -43,8 +43,8 @@ form input {
 }
 
 button {
-    background-color: #4CAF50;
-    color: white;
+    background-color: white;
+    color: #4CAF50;
     padding: 10px;
     border: none;
     cursor: pointer;
