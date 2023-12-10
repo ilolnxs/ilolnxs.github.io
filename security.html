@@ -6,38 +6,116 @@
     <link rel="stylesheet" href="styles.css">
     <title>Security Cockpit - Cloud Services Portal</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Add custom styles for the landing page content */
+        .landing-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .landing-content h2 {
+            color: #333;
+        }
+
+        .landing-content p {
+            color: #666;
+        }
+
+        /* Add styles for the security and governance boxes */
+        .statistics-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .statistic-box,
+        .security-box {
+            width: 45%;
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .scale-green {
+            color: #00cc00;
+        }
+
+        .scale-yellow {
+            color: #ffcc00;
+        }
+
+        .scale-red {
+            color: #ff3300;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <h1>Cloud Services Portal</h1>
+        <h1>Cloud Platform</h1>
     </header>
 
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
+            <li><a href="order.html">Order awesome cloud stuff</a></li>
             <li><a href="cockpit.html">Cockpit</a></li>
+            <li><a href="productOverview.html">Product overview</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <section id="security">
-        <h2>Security Cockpit</h2>
-        <canvas id="securityChart" width="400" height="400"></canvas>
-        
-        <!-- Boxes for additional security questions -->
-        <div class="security-box scale-green">
-            <h3>How safe is the Cloud?</h3>
-            <p>Yes</p>
-        </div>
+    <div class="landing-content">
+        <h2>Welcome to the Cloud Services Portal</h2>
+        <p>Unlock the full potential of cloud computing with our advanced and user-friendly portal. Here's why it's awesome:</p>
 
-        <div class="security-box scale-green">
-            <h3>Is my data still safe?</h3>
-            <p>Yes</p>
-        </div>
-        <!-- End of security boxes -->
+        <h2>What You Can Do:</h2>
+        <p>Order a variety of cloud services tailored to your needs.</p>
+        <p>Monitor and manage your services efficiently using our intuitive Cockpit.</p>
+        <p>Explore our product offerings in detail to find the perfect solution for your projects.</p>
 
-        <!-- Add other security-related content here -->
-    </section>    
+        <h2>Why It's Awesome:</h2>
+        <p>Experience top-notch security and governance features to ensure the safety of your data.</p>
+        <p>Enjoy the flexibility of our platform, designed to scale with your business requirements.</p>
+        <p>Benefit from a seamless and hassle-free cloud service ordering process.</p>
+
+        <!-- Security and Governance Boxes -->
+        <div class="statistics-container">
+            <!-- Governance Boxes -->
+            <div class="statistic-box scale-green">
+                <h3>Cloud Service Health</h3>
+                <p>100%</p>
+            </div>
+
+            <div class="statistic-box scale-yellow">
+                <h3>User Recertification</h3>
+                <p>95%</p>
+            </div>
+
+            <div class="statistic-box scale-red">
+                <h3>Managed Service Provider Quality</h3>
+                <p>5%</p>
+            </div>
+            
+            <!-- Security Boxes -->
+            <div class="security-box scale-green">
+                <h3>How safe is the Cloud?</h3>
+                <p>Yes</p>
+            </div>
+
+            <div class="security-box scale-green">
+                <h3>Is my data still safe?</h3>
+                <p>Yes</p>
+            </div>
+        </div>
+        <!-- End of Security and Governance Boxes -->
+    </div>
 
     <footer>
         <p>&copy; 2023 Cloud Services Portal</p>
@@ -65,8 +143,4 @@
                     display: true,
                     position: 'bottom', // You can adjust the legend position
                 },
-            },
-        });
-    </script>
-</body>
-</html>
+   
