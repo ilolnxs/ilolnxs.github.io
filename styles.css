@@ -44,14 +44,14 @@ form input {
 
 button {
     background-color: white;
-    color: #4CAF50;
+    color: #0d0d2f;
     padding: 10px;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #24248c;
 }
 
 footer {
