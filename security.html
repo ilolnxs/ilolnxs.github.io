@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Security Cockpit - Cloud Services Portal</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -19,14 +20,34 @@
         </ul>
     </nav>
 
-    <section id="cockpit">
+    <section id="security">
         <h2>Security Cockpit</h2>
-        <!-- Add specific content for the Security Cockpit -->
-    </section>
+        <canvas id="securityChart" width="400" height="400"></canvas>
+        <!-- Add other security-related content here -->
+    </section>    
 
     <footer>
         <p>&copy; 2023 Cloud Services Portal</p>
     </footer>
 
 </body>
+<script>
+    // Get the canvas element
+    var ctx = document.getElementById('securityChart').getContext('2d');
+
+    // Define data for the pie chart
+    var data = {
+        labels: ['Secure', 'Not Secure'],
+        datasets: [{
+            data: [75, 25], // Example data, you can adjust these percentages
+            backgroundColor: ['#36a2eb', '#ff6384'], // Colors for each segment
+        }],
+    };
+
+    // Create the pie chart
+    var myPieChart = new Chart(ctx, {
+        type: 'pie',
+        data: data,
+    });
+</script>
 </html>

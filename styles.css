@@ -60,3 +60,10 @@ footer {
     padding: 10px;
     background-color: #0d0d2f; /* Darker blue for the footer background */
 }
+
+canvas#securityChart {
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+}
